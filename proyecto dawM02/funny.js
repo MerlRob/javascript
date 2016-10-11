@@ -1,6 +1,6 @@
 
 
-/*var cuenta = new Array(4);
+var cuenta = new Array(4);
 var totalAcreedor= 0;
 var suma= 0;
 
@@ -33,10 +33,10 @@ var suma= 0;
 		
 		totalAcreedor=totalAcreedor + parseInt(suma);
 		}
-		document.write("Total del saldo acreedor: " + totalAcreedor);	*/
+		document.write("Total del saldo acreedor: " + totalAcreedor);	
 		
 		
-		/*
+		
 		
 		var base = 0;
 		var altura = 0;
@@ -59,9 +59,42 @@ var suma= 0;
 		}
 		document.write("Hay " + count + " triangulos cuya superficie es mayor a 12");
 	
-	*/
+	 
+	 
+	/* 7 - Se realiza la carga de 10 valores enteros por teclado. Se desea conocer: a) La cantidad de valores negativos ingresados.
+b) La cantidad de valores positivos ingresados.
+c) La cantidad de múltiplos de 15.
+d) El valor acumulado de los números ingresados que son pares*/
+	 
+	 
+	var numeros = new Array();
+	var valores;
+	var positivos = 0;
+	var multiplos = 0;
+	var pares = 0;
 	
-	
-	
+	for(var i =0; i <10; i++){
 		
+		valores = prompt("Escribe un número");
+			valores = parseInt(valores);
+				numeros.push(valores);
+		
+					if(numeros[i] >0 ){
+					positivos++;}
+				
+					if(numeros[i]%15 == 0){
+					multiplos ++;}
+								
+					if(numeros[i]%2 == 0)
+					{pares += numeros[i]; 
+						}
+				
+				
+				
+			
+				
+	document.write("los números introducidos son; " + numeros[i] +"<br>");
+	document.write("los números positivos son " + positivos + " y los multiplos de quince son: " + multiplos  +"<br>");
+	document.write("el acumulado de los números pares es: " + pares  +"<br>");
+			}
 		
